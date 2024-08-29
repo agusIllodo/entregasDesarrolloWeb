@@ -1,0 +1,287 @@
+// Variables
+$font-family: "Poppins", sans-serif;
+$color-white: white;
+$color-black: black;
+$background-image: url('../assets/background-image.png');
+
+// Mixin for common styles
+@mixin common-font-styles {
+    font-family: $font-family;
+}
+
+// Header styles
+.header {
+    @include common-font-styles;
+    color: $color-white;
+    background-color: $color-black;
+    height: 120px;
+    text-align: center;
+}
+
+// Menu item styles
+.menu-item {
+    display: inline-block;
+    padding: 1rem;
+}
+
+// Menu item and anchor tags
+.menu-item, a {
+    color: $color-white;
+    text-decoration: none;
+}
+
+// Buscador styles
+.buscador {
+    width: 30%;
+    height: 25px;
+}
+
+// Menu icon styles
+.menu-icon {
+    width: 240px;
+    height: 100px;
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+// Principal styles
+.principal {
+    text-align: center;
+}
+
+// Wrapper styles
+.wrapper {
+    @include common-font-styles;
+    justify-content: space-around;
+    align-items: center;
+    background-image: $background-image;
+}
+
+// Letra chica styles
+.letra-chica {
+    font-size: 12px;
+}
+
+// Footer styles
+.footer {
+    @include common-font-styles;
+    color: $color-white;
+    background-color: $color-black;
+    height: 110px;
+    font-size: 12px;
+    padding: 1rem;
+}
+
+// Footer ul styles
+.footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+// Redes styles
+.redes {
+    padding: 10px;
+    width: 25px;
+    height: 25px;
+    float: right;
+}
+
+// Change color styles
+.change-my-color {
+    fill: $color-white;
+    background-color: $color-white;
+}
+
+// Container styles
+.my-container {
+    display: flex;
+    height: 70vh;
+    @include common-font-styles;
+    padding: 1rem;
+}
+
+// Left and right side styles
+.left-side,
+.right-side {
+    flex: 1;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+
+// Right side image styles
+.right-side img {
+    width: 100%;
+}
+
+// Redes contacto styles
+.redes-contacto {
+    padding: 10px;
+    margin: 5px;
+    width: 25px;
+    height: 25px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(0%);
+}
+
+// Sidebar styles
+.sidebar {
+    height: 100%;
+    width: 211px;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    background-color: $color-black;
+    padding-top: 10px;
+    @include common-font-styles;
+    
+    h2 {
+        color: $color-white;
+        text-align: center;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+        
+        li {
+            padding: 10px;
+            text-align: center;
+            
+            a {
+                color: $color-white;
+                text-decoration: none;
+                display: block;
+                
+                &:hover {
+                    background-color: #555;
+                }
+            }
+        }
+    }
+}
+
+// Content styles
+.content {
+    background-image: $background-image;
+    padding: 20px;
+    overflow: auto;
+    max-height: 100vh;
+    display: block;
+}
+
+// Bebidas styles
+.bebidas {
+    @include common-font-styles;
+    font-size: 20px;
+    text-align: center;
+}
+
+// Boton styles
+.boton {
+    @include common-font-styles;
+    font-size: 15px;
+    text-align: center;
+    background-color: $color-black;
+    color: $color-white;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.25rem;
+}
+
+// Media queries
+@media (max-width: 700px) {
+    .menu-icon {
+        margin-left: 0;
+    }
+
+    .content {
+        background-image: $background-image;
+        margin-left: 0;
+        padding: 0;
+        overflow: auto;
+        max-height: 100vh;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .right-side {
+        flex: 1;
+        padding: 10px 0 0 0;
+        text-align: left;
+    }
+}
+
+.offcanvas-start {
+    width: 250px;
+}
+
+// Keyframes
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.zoomIn {
+    animation: zoomIn 2s ease-in;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.pulse-on-hover {
+    transition: transform 0.3s, opacity 0.3s;
+    
+    &:hover {
+        animation: pulse 1.5s infinite;
+    }
+}
+
+@keyframes moveIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.moveIn {
+    transform: translateX(-100%);
+    animation: moveIn 1s ease-out forwards;
+}
