@@ -79,7 +79,7 @@ a {
     background-color: white;
 }
 
-.container {
+.my-container {
     display: flex;
     height: 70vh;
     font-family: "Poppins", sans-serif;
@@ -117,7 +117,7 @@ a {
     height: 100%;
     width: 250px;
     position: absolute;
-    top: 65px;
+    top: 66px;
     left: 0px;
     background-color: black;
     padding-top: 10px;
@@ -150,11 +150,11 @@ a {
 }
 
 .content {
-    background-image: url('../assets/background-image.png');
-    margin-left: 250px;
+    background-image: url('../assets/background-image.png');    
     padding: 20px;
     overflow: auto;    
-    max-height: 90vh;
+    max-height: 100vh;
+    display: block;
 }
 
 .bebidas {
@@ -179,6 +179,17 @@ a {
 @media (max-width: 700px) {
     .menu-icon {
         margin-left: 0;
+    }
+    .content {
+        background-image: url('../assets/background-image.png');
+        margin-left: 0px;
+        padding: 0px;
+        overflow: auto;    
+        max-height: 100vh;
+    }
+    .sidebar{
+        display: none;
+
     }
 }
 
