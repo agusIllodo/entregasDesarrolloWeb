@@ -62,8 +62,8 @@
 
 .redes {
   padding: 10px;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   float: right;
 }
 
@@ -237,6 +237,10 @@
 .moveIn {
   transform: translateX(-100%);
   animation: moveIn 1s ease-out forwards;
+}
+
+.navbar-nav .nav-item {
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=styles.css.map */
