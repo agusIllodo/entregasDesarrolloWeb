@@ -39,11 +39,10 @@ a {
 
 
 .wrapper {
-    font-family: "Poppins", sans-serif;
-    display: flex;
+    font-family: "Poppins", sans-serif;    
     justify-content: space-around;
     align-items: center;
-    margin: 1rem;
+    
     background-image: url('../assets/background-image.png');
 }
 
@@ -197,3 +196,60 @@ a {
 .offcanvas-start {
     width: 250px;
 }
+
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  .fadeIn {
+    animation: fadeIn 2s ease-in;
+  }
+
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+    
+  .zoomIn {
+    animation: zoomIn 2s ease-in;
+  }
+
+
+  /* Define la animación de pulso */
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1); /* Cambia el valor para ajustar la intensidad del pulso */
+      opacity: 0.7; /* Opcional: puedes ajustar la opacidad para hacer el pulso más sutil */
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Aplica la animación solo cuando se pasa el cursor sobre el elemento */
+  .pulse-on-hover {
+    transition: transform 0.3s, opacity 0.3s; /* Suaviza el cambio */
+  }
+  
+  .pulse-on-hover:hover {
+    animation: pulse 1.5s infinite; /* La animación durará 1.5 segundos y se repetirá infinitamente */
+  }

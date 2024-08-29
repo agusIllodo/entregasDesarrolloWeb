@@ -11,6 +11,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.scss">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home-ChillSip</title>
@@ -30,27 +31,27 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    <li class="nav-item pulse-on-hover">
                         <a href="./index.html" class="nav-link active" aria-current="page">
                             HOME
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item pulse-on-hover">
                         <a href="./pages/productos.html" class="nav-link">
                             PRODUCTOS
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item pulse-on-hover">
                         <a class="nav-link" href="./pages/ofertas.html">
                             OFERTAS
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item pulse-on-hover">
                         <a href="./pages/como-comprar.html" class="nav-link">
                             COMO COMPRAR
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item pulse-on-hover">
 
                         <a href="./pages/contacto.html" class="nav-link">
                             CONTACTO
@@ -69,8 +70,8 @@
         <div>
             <img src="./assets/background-image.png" alt="" class="w-100">
         </div>
-        <div class="wrapper row p-4 m-0">
-            <div class="card p-2 m-1" style="max-width: 20rem;">
+        <div class="wrapper row col-md-12 m-0">
+            <div class="card p-2 m-1 col-md-3 d-inline-block fadeIn" >
                 <img src="./assets/vino1.jpg" alt="" class="card-img-top" style="width: 100%;  max-height: 300px">
                 <div class="card-body">
                     <p>Cabernet Malbec</p>
@@ -82,7 +83,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card p-2 m-1" style="max-width: 20rem;">
+            <div class="card p-2 m-1 col-md-3 d-inline-block fadeIn" >
                 <img src="./assets/vino7.jpg" alt="" class="card-img-top" style="width: 100%;  max-height: 300px">
                 <div class="card-body">
                     <p>Malbec</p>
@@ -93,7 +94,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card p-2 m-1" style="max-width: 20rem;">
+            <div class="card p-2 m-1 col-md-3 d-inline-block fadeIn" >
                 <img src="./assets/vino1.jpg" alt="" class="img-fluid" style="width: 100%;  max-height: 300px">
                 <div class="card-body">
                     <p>Cabernet Malbec</p>
@@ -105,18 +106,6 @@
                     </div>
                 </div>
             </div>
-            <div class="card p-2 m-1" style="max-width: 20rem;">
-                <img src="./assets/vino7.jpg" alt="" class="img-fluid" style="width: 100%;  max-height: 300px">
-                <div class="card-body">
-                    <p>Cabernet Franc Malbec</p>
-                    <h1>$40.500</h1>
-                    <p class="letra-chica">Vino El Gran Enemigo Corte Cabernet Franc Malbec 750cc</p>
-                    <div class="card-text">
-                        <button class="btn btn-dark">Envio gratis</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
         <iframe style="border-radius:12px"
             src="https://open.spotify.com/embed/playlist/0bkVRE8ZmD69ypr7Fj0fdj?utm_source=generator" width="100%"
