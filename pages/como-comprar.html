@@ -80,41 +80,47 @@
         </div>
     </nav>
     <main>
-        <div class="row p-5">
-            <div class="col-md-6 col-sm-12 left-side" style="border: 5px solid black;">
-                <h1 style="text-align: center;">Pasos para tu compra</h1>
-                <ol>
-                    <li>
-                        <p>
-                            Elegí el producto que quieras, presionando sobre la imagen.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Clickea en comprar ahora
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Completá el formulario con los datos de la compra
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Elegí la opcion de pago
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Clickea en pagar y ¡listo!
-                        </p>
-                    </li>
-                </ol>
 
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <div class="right-side">
-                    <img src="../assets/background-image.png" alt="">
+        <div class=" m-5">
+            <h2 class="text-center">Pasos para tu compra</h2>
+            <div>
+                <div class="wizard-step active" id="step1">
+                    <div class="card card-body">
+                        <h5>Paso 1</h5>
+                        <form id="form1">
+                            <div class="row">
+                                <p>Busca el producto que más te guste entre la amplia variedad, hacele click y sumalo a
+                                    tu
+                                    compra.</p>
+                            </div>
+                            <button type="button" class="btn btn-primary next-step w-100"
+                                data-next-step="2">Siguiente</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="wizard-step" id="step2">
+                    <div class="card card-body">
+                        <h5>Paso 2</h5>
+                        <form id="form2">
+                            <div class="row">
+                                <p>
+                                    Clickea en comprar y completa el formulario con los datos requeridos.
+                                </p>
+                            </div>
+                            <button type="button" class="btn btn-primary next-step w-100"
+                                data-next-step="3">Siguiente</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="wizard-step" id="step3">
+                    <div class="card card-body">
+                        <h5>Paso 3</h5>
+                        <p>Elegí el medio de pago que más te convenga, acomodá los pagos a tu gusto y paga.
+                            <strong>¡Listo!</strong>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -127,20 +133,69 @@
         </div>
     </main>
 
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link2');
+            const steps = document.querySelectorAll('.wizard-step');
+            const nextButtons = document.querySelectorAll('.next-step');
+            const submitButton = document.querySelector('.submit-wizard');
+
+            let currentStep = 1;
+
+            function showStep(step) {
+                steps.forEach((wizardStep, index) => {
+                    wizardStep.classList.toggle('active', index + 1 === step);
+                });
+                navLinks.forEach((navLink, index) => {
+                    navLink.classList.toggle('active', index + 1 === step);
+                });
+            }
+
+            navLinks.forEach(navLink => {
+                navLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const step = parseInt(navLink.getAttribute('data-step'));
+                    showStep(step);
+                });
+            });
+
+            nextButtons.forEach(nextButton => {
+                nextButton.addEventListener('click', () => {
+                    const nextStep = parseInt(nextButton.getAttribute('data-next-step'));
+                    showStep(nextStep);
+                });
+            });
+
+
+            // Initialize the wizard
+            showStep(currentStep);
+        });
+    </script>
     <footer class="footer">
         <section>
-            <ul style="display: inline-block;">
+            <ul class="d-inline-block">
                 <li>Puedes encontrarnos en</li>
                 <li>Av. Colón 5874 - Cba Capital</li>
                 <li>Lu a Sab de 10 a 00hs</li>
             </ul>
-            <div style="display: inline-block;float: right;">
+
+
+            <div style="display: inline-block; float: right;">
                 <a href="https://www.instagram.com/chillsip" aria-label="Instagram de ChillSip">
                     <img src="../assets/instagram.svg" alt="Síguenos en Instagram" class="redes">
                 </a>
                 <a href="https://www.facebook.com/chillsip" aria-label="Facebook de ChillSip">
                     <img src="../assets/facebook.svg" alt="Síguenos en Facebook" class="redes">
                 </a>
+            </div>
+            <div class="d-inline-block" style="float: right; margin-right: 1.5rem;">
+                <a class="p-2" href="../index.html">Inicio</a>
+                <a class="p-2" href="../pages/productos.html">Productos</a>
+                <a class="p-2" href="../pages/ofertas.html">Ofertas</a>
+                <a class="p-2" href="#">Cómo Comprar</a>
+                <a class="p-2" href="../pages/contacto.html">Contacto</a>
             </div>
         </section>
     </footer>

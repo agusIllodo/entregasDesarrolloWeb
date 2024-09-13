@@ -59,7 +59,11 @@
   margin: 0;
   padding: 0;
 }
-
+.redes-contactar{
+  padding: 10px;
+  width: 60px;
+  height: 60px;  
+}
 .redes {
   padding: 10px;
   width: 40px;
@@ -243,4 +247,15 @@
   text-transform: uppercase;
 }
 
+.imagen-contacto {
+  background-image: url("../assets/imagen-contacto2.jpg");
+}
+
 /*# sourceMappingURL=styles.css.map */
+.wizard-step {
+  display: none; /* Los pasos estarán ocultos inicialmente */
+}
+
+.wizard-step.active {
+  display: block; /* El paso activo se mostrará */
+}

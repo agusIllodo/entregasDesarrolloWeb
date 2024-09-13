@@ -1,13 +1,5 @@
-// Variables
-$font-family: "Poppins", sans-serif;
-$color-white: white;
-$color-black: black;
-$background-image: url('../assets/background-image.png');
-
-// Mixin for common styles
-@mixin common-font-styles {
-    font-family: $font-family;
-}
+@import 'partials/variables';
+@import 'partials/mixins';
 
 // Header styles
 .header {
@@ -88,6 +80,7 @@ $background-image: url('../assets/background-image.png');
     height: 40px;
     float: right;
 }
+
 
 // Change color styles
 .change-my-color {
@@ -288,4 +281,8 @@ $background-image: url('../assets/background-image.png');
 
 .navbar-nav .nav-item {
     text-transform: uppercase;
+  }
+
+  .imagen-contacto{
+    background-image: url('../assets/imagen-contacto2.jpg');
   }
